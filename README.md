@@ -9,7 +9,12 @@ This project performs semi-automatic binary segmentation based on SLIC superpixe
      as well as superpixel-FG/BG interaction
   6. Run a graph-cut algorithm to get the final segmentation
   
-But, what's segmentation without the user having a say? :) - made it interactive, too!
+The output of this binary segmentation is mask.png.
+
+But, what's segmentation without the user having a say? :) - made it interactive, too! (main_bonus.py)
+
 For every interaction step (mouse click, drag, etc.):
   1. recalculate only the FG-BG histograms,
   2. construct the graph and get a segmentation from the max-flow graph-cut, show the result immediately to the user.   
+  
+Check out the working of this interaction with bonus.mp4

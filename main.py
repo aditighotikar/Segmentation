@@ -1,9 +1,3 @@
-# ================================================
-# Skeleton codes for HW4
-# Read the skeleton codes carefully and put all your
-# codes into main function
-# ================================================
-
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
@@ -103,7 +97,7 @@ def do_graph_cut(fgbg_hists, fgbg_superpixels, norm_hists, neighbors):
     return g.get_grid_segments(nodes)
 
 def RMSD(target, master):
-    # Note: use grayscale images only
+    # grayscale images only
 
     # Get width, height, and number of channels of the master image
     master_height, master_width = master.shape[:2]
@@ -136,12 +130,7 @@ if __name__ == '__main__':
     img = cv2.imread(sys.argv[1], cv2.imread_color)
     img_marking = cv2.imread(sys.argv[2], cv2.imread_color)
 
-    # ======================================== #
-    # write all your codes here
-
     mask = cv2.cvtcolor(img_marking, cv2.color_bgr2gray) # dummy assignment for mask, change it to your result
-
-    # ======================================== #
 
     # read video file
     output_name = sys.argv[3] + "mask.png"
